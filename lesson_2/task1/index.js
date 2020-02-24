@@ -5,6 +5,6 @@ const _profession = 'Developer';
 const $hobby = 'Walking';
 const favouriteDessert = 'cake';
 let pet_ = 'dog';
-let number;
-let number = 17;
+let superNumber;
+supernumber = 17;
 
