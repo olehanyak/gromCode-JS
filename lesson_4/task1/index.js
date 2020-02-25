@@ -1,7 +1,7 @@
 let n = 110;
 let sum = 0;
 
-for (let i = 0; i < n; i++) {
+for (let i = 0; i <= n; i++) {
     sum += i;
 }
 
@@ -10,5 +10,4 @@ for (let i = 0; i < n; i++) {
 //     n -= 1;
 // }
 
-console.log('Result: ' + sum);
-console.log(sum);
+console.log("Result: " + sum);
