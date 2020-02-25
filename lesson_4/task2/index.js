@@ -1,12 +1,17 @@
-let m = 20;
-let n = 50;
+
 let result = 1;
 
-do {
+for (let m = 10; m <= 20; m++) {
     if (m % 2 === 1) {
-        result += m;
+        result *= m;
     }
-    m++;
-} while (m <= n);
+}
+
+// do {
+//     if (m % 2 === 1) {
+//         result *= m;
+//     }
+//     m++;
+// } while (m <= n);
 
 console.log('Result: ' + result);
