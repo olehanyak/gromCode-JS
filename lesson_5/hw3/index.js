@@ -1,4 +1,4 @@
-function increacer(a, index) {
+function increaser(a, index) {
     if (a > index) {
         return a * index;
     } else {
@@ -6,4 +6,4 @@ function increacer(a, index) {
     }
 }
 
-increacer(10, 5);
+increaser(10, 5);
