@@ -1,8 +1,6 @@
 
 function sum(a, b) {
-    console.log(a + b);
+    return a + b;
 }
 
-sum(5, 9);
-
-
+console.log(sum(5, 9));
