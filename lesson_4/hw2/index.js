@@ -1,5 +1,5 @@
-const m = 7;
-const n = 50;
+let m = 7;
+let n = 50;
 let result = 0;
 
 
