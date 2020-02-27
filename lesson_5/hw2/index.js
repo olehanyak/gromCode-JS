@@ -14,5 +14,4 @@ function getPrimes(num) {
     }
 }
 
-getPrimes(30);
-// console.log(getPrimes());
+// getPrimes(30);
