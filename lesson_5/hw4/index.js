@@ -13,7 +13,7 @@ function compareSums(a, b, c, d) {
     // let sum1 = (a, b);
     // let sum2 = (c, d);
     if (sum(a, b) > sum(c, d)) {
-        console.log(getSum(a, b));
+        console.log(sum(a, b));
         return true;
     }
     else {
@@ -23,4 +23,4 @@ function compareSums(a, b, c, d) {
 }
 
 
-compareSums(2, 5, 3, 2);
+compareSums(2, 5, 1, 2);
