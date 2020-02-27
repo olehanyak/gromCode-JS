@@ -1,10 +1,12 @@
 function increaser(a, index) {
     if (a > index) {
-        return a * index;
-
+        a += index;
+        // console.log(a);
+        return a;
     } else {
         return a;
     }
+   
 }
 
-increaser(1, 5);
+increaser(10, 5);
