@@ -2,7 +2,7 @@ const nameClients = ["Nick", "Oscar", "Mark", "Kate"];
 
 const clientBalance = [100, 200, 50, 1000];
 
-function withDraw(clients, balances, client, amount) {
+function withdraw(clients, balances, client, amount) {
     let a = 0
     let b = 0
     for (let i = 0; i < clients.length; i++) {
@@ -21,6 +21,6 @@ function withDraw(clients, balances, client, amount) {
     }
 }
 
-const clientsBalances = withDraw(nameClients, clientBalance);
+const clientsBalances = withdraw(nameClients, clientBalance);
 
 console.log(clientsBalances);
