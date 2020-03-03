@@ -9,16 +9,16 @@ function withdraw(clients, balances, client, amount) {
     for (let i = 0; i < clients.length; i++) {
         // a.push(clients[i]);
         console.log(clients[i]);
-        for (let k = 0; k < balances.length; k++) {
+        // for (let k = 0; k < balances.length; k++) {
             // b.push(balances[k]);
-            console.log(balances[k]);
-            if (clients[i] === client && balances[k] > amount) {
-                return a -= amount;
+            console.log(amount);
+            if (clients[i] === client && balances > amount) {
+                return balances -= amount;
             } 
-            else if (balances[k] < amount) {
+            else if (balances < amount) {
                 return -1;
             }
-        }
+        // }
        
     }
   
