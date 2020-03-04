@@ -3,7 +3,7 @@ const squareArray = numbers => {
 
     numbers.forEach(element => {
         // console.log(numbers)
-        if (Array.isArray(element)) {
+        if (!Array.isArray(numbers)) {
             return null;
         }
         else if (element) {
