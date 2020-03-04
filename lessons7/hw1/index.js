@@ -2,11 +2,10 @@ const squareArray = numbers => {
     let squareNum = [];
 
     numbers.forEach(element => {
-        // console.log(numbers)
+        // console.log(element)
         if (!Array.isArray(numbers)) {
             return null;
-        }
-        else if (element) {
+        } else if (element) {
             squareNum.push(element * element);
         }
     });
@@ -16,3 +15,5 @@ const squareArray = numbers => {
 const squareNumbers = [2, 3, 4, 5, 6];
 
 console.log(squareArray(squareNumbers));
+
+console.log(squareNumbers);
