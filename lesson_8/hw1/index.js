@@ -1,12 +1,15 @@
 const pickProps = (obj, arr) => {
-    let a = {};
-    arr.forEach(elem => {
-        a[elem] = elem;
-    });
-    return a;
+    let newObject = {};
+
+    for (let i = 0; i < arr.length; i++) {
+        const key = arr[i];
+        newObject[key] = obj[key];
+    }
+    
+    return newObject;
 }
 
-const someArray = [17.1, 'John Doe'];
+const someArray = ['a', 17.1, 'John Doe'];
 
 const someObject = {
     a: 'a',
