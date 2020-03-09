@@ -3,8 +3,8 @@ const multiRound = num => [
     Math.round(num * 100) / 100,
     Math.ceil(num * 100) / 100,
     Math.trunc(num * 100) / 100,
-    num.toFixed(2),
+    +num.toFixed(2),
 ];
-// const numberArr = [Math.PI];
+// const numberArr = [1.2340];
 
-console.log(multiRound(Math.PI));
+console.log(multiRound(1.234));
