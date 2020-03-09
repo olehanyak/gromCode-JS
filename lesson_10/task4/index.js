@@ -1,12 +1,13 @@
 const getMaxAbsoluteNumber = arr => {
-    let absoluteValue = arr;
-    if (!Array.isArray(arr) || absoluteValue.length === 0)
-        return null;
-    absoluteValue.map(num => Math.abs(num));
-    return Math.max(...absoluteValue);
-}
+    // let absoluteValue = arr
+    if (!Array.isArray(arr) || arr.length === 0)
+        return null
+    let absoluteValue = arr
+        .map(num => Math.abs(num))
+    return Math.max(...absoluteValue)
+};
 
-const resultArr = [-22, 1, 44, 2020, 6, 78, 109, 1999];
+const resultArr = [-777, 3, -1, 45, -20, -2020];
 // const resultArr = [];
 
 console.log(getMaxAbsoluteNumber(resultArr));
