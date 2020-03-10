@@ -1,11 +1,13 @@
-const superRound = (num, len) => [
-    Math.floor(num * len) / len,
-    Math.round(num * len) / len,
-    Math.ceil(num * len) / len,
-    Math.trunc(num * len) / len,
-    num.toFixed(len),
-];
+const superRound = function(num, len) {
+    const res = Math.pow(10, len);
+   
+    return  [
+        Math.floor(num * res) / res,
+        Math.round(num * res) / res,
+        Math.ceil(num * res) / res,
+        Math.trunc(num * res) / res,
+        +num.toFixed(len)
+    ];
+};
 
-// const numberArr = [13.4, 5];
-
-console.log(superRound(13.4, 7));
+console.log(superRound(1.23, 5));
