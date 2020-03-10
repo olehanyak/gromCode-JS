@@ -3,9 +3,9 @@ const getTotalPrice = arr => {
     arr.forEach(element => {
         sum += element
     });
-    return '$' + Math.floor(sum).toFixed(2);
+    return '$' + Math.floor(sum * 100) / 100;
 }
 
-const numbersArr = [12.544, 38.057, 20.993];
+const numbersArr = [12.159];
 
 console.log(getTotalPrice(numbersArr));
