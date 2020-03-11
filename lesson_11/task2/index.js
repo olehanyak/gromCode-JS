@@ -21,14 +21,22 @@ const contacts = [
     }
 ];
 
-const sortContacts = contacts => {
+const direction = true;
+
+const sortContacts = (contacts, direction) => {
     if (!Array.isArray(contacts)) {
         return null;
     }
     const result = contacts.sort((a, b) => {
-        return b.name.localeCompare(a.name);
+        if (direction === true) {
+            return a.name.localeCompare(b.name);
+        }
+        else {
+            return b.name.localeCompare(a.name);
+        }
     });
+
     return result;
 };
 
-console.log(sortContacts(contacts));
+console.log(sortContacts(contacts, direction));
