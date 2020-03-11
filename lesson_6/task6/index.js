@@ -1,5 +1,5 @@
 const getSum = arr => {
-    if (!Array.isArray) return null;
+    if (!Array.isArray(arr)) return null;
     return arr.reduce((accumulator, currentValue) => accumulator + currentValue);
 }
 
