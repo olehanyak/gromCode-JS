@@ -1,13 +1,7 @@
 const getSum = arr => {
     if (!Array.isArray) return null;
-    arr.reduce(function (accumulator, currentValue) {
-        return accumulator + currentValue;
-    });
+    return arr.reduce((accumulator, currentValue) => accumulator + currentValue);
 }
-
-
-
-
 
 const someArr = [25, 50, 125];
 
