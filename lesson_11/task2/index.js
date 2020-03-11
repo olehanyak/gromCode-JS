@@ -28,14 +28,12 @@ const sortContacts = (contacts, isAsc) => {
         return null;
     }
     const result = contacts.sort((a, b) => {
-            return a.name.localeCompare(b.name);
-      
-    });
-    if (!isAsc) {
-        contacts.sort((a, b) => {
+        if (!isAsc) {
             return b.name.localeCompare(a.name);
-        });
-    }
+        } else {
+            return a.name.localeCompare(b.name);
+        }
+    });
     return result;
 };
 
