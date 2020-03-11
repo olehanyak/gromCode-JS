@@ -23,4 +23,4 @@ const splitString = (str, num) => {
     return strArr.join("\n");
 };
 
-console.log(splitString("kevin space", 10));
+console.log(splitString("kevinspacerwet", 3));

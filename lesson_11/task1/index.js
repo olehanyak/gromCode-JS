@@ -14,7 +14,7 @@ const splitText = (text, len) => {
         if (chunk.length === 0) {
             break;
         }
-        if (len === 0) {
+        if (len === undefined) {
             strArr.push(chunk[0].toUpperCase() + chunk.slice(1));
             startPosition += 10;
         }
