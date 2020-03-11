@@ -23,19 +23,19 @@ const contacts = [
 
 const direction = true;
 
-const sortContacts = (contacts, direction) => {
+const sortContacts = (contacts, isAsc) => {
     if (!Array.isArray(contacts)) {
         return null;
     }
     const result = contacts.sort((a, b) => {
-        if (direction === true) {
+        if (isAsc) {
             return a.name.localeCompare(b.name);
         }
         // else {
         //     return b.name.localeCompare(a.name);
         // }
     });
-    if (direction === false) {
+    if (!isAsc) {
         contacts.sort((a, b) => {
             return b.name.localeCompare(a.name);
         });
