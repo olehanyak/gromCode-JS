@@ -1,5 +1,4 @@
-const contacts = [
-    {
+const contacts = [{
         name: "William",
         phoneNumber: "555-55-55"
     },
@@ -28,12 +27,13 @@ const sortContacts = (contacts, isAsc) => {
         return null;
     }
     const result = contacts.sort((a, b) => {
-        if (isAsc) {
-            return a.name.localeCompare(b.name);
-        } else {
-            return b.name.localeCompare(a.name);
-        }
+        return a.name.localeCompare(b.name);
     });
+    if (!isAsc) {
+        contacts.sort((a, b) => {
+            return b.name.localeCompare(a.name)
+        });
+    }
     return result;
 };
 
