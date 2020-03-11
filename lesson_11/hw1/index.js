@@ -11,6 +11,7 @@ const splitString = (str, num) => {
 
     while (true) {
         let chunk = str.substr(startPosition, num);
+        // console.log(chunk)
         if (chunk.length === 0) {
             break;
         }
@@ -20,7 +21,7 @@ const splitString = (str, num) => {
         strArr.push(chunk.slice(0));
         startPosition += num;
     }
-    return strArr.join("\n");
+    return strArr;
 };
 
-console.log(splitString("kevinspacerwet", 3));
+console.log(splitString("kevinspacerwet", 6));
