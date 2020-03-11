@@ -28,10 +28,10 @@ const sortContacts = (contacts, isAsc) => {
         return null;
     }
     const result = contacts.sort((a, b) => {
-        if (!isAsc) {
-            return b.name.localeCompare(a.name);
-        } else {
+        if (isAsc) {
             return a.name.localeCompare(b.name);
+        } else {
+            return b.name.localeCompare(a.name);
         }
     });
     return result;
