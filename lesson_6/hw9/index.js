@@ -1,5 +1,5 @@
 const createEmptyArray = len => {
-    return len;
+    return Array(len);
 }
 
 console.log(createEmptyArray([]));
