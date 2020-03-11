@@ -31,11 +31,15 @@ const sortContacts = (contacts, direction) => {
         if (direction === true) {
             return a.name.localeCompare(b.name);
         }
-        else {
-            return b.name.localeCompare(a.name);
-        }
+        // else {
+        //     return b.name.localeCompare(a.name);
+        // }
     });
-
+    if (direction === false) {
+        contacts.sort((a, b) => {
+            return b.name.localeCompare(a.name);
+        });
+    }
     return result;
 };
 
