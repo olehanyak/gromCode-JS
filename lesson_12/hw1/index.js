@@ -1,6 +1,7 @@
 const reverseString = str => {
-    if (str === '') return null;
+    // if (str !== String)  return null;
+    if (typeof(str) !== 'string')  return null;
     return str.split("").reverse().join("");
 }
 
-console.log(reverseString('JavaScript'));
+console.log(reverseString('tpircSavaJ'));
