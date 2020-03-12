@@ -1,5 +1,5 @@
 const reverseString = str => {
-    if (str === !String) return null;
+    if (str === '') return null;
     return str.split("").reverse().join("");
 }
 
