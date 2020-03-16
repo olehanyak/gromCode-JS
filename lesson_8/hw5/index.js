@@ -1,8 +1,8 @@
 const getKeys = obj => {
     let keysArr = Object.keys(obj);
-    const newArr = [];
+    let newArr = '';
     keysArr.forEach(elem => {
-        newArr.push(elem);
+        newArr += elem + ' ';
     });
     return newArr;
 };
