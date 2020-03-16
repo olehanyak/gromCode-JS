@@ -18,7 +18,7 @@ const user = {
   
   /* выведите в консоль объект user */
   user.hobby = 'Football';
-  user.anotherKey = 'false';
+  user[anotherKey] = false;
   user['favorite music'] = 'rock';
   user['address'] = {};
   user.address['country'] = 'Ukraine';
