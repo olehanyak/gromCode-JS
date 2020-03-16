@@ -1,6 +1,10 @@
 const getKeys = obj => {
     let keysArr = Object.keys(obj);
-    return keysArr;
+    const newArr = [];
+    keysArr.forEach(elem => {
+        newArr.push(elem);
+    });
+    return newArr;
 };
 
 const alien = {
