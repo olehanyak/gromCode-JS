@@ -1,8 +1,8 @@
 const getKeys = obj => {
     let keysArr = Object.keys(obj);
-    let newArr = '';
-    keysArr.forEach(elem => {
-        newArr += elem + ' ';
+    ;
+    let newArr = keysArr.forEach(elem => {
+        console.log(elem)
     });
     return newArr;
 };
@@ -15,4 +15,4 @@ const alien = {
     'favorite food': 'cats',
 };
 
-console.log(getKeys(alien));
+getKeys(alien);
