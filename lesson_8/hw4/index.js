@@ -17,7 +17,7 @@ const user = {
   /* присвойте объекту в 'address' свойство 'building', со значением 17 */
   
   /* выведите в консоль объект user */
-  user.hobby = 'Football';
+  user.hobby = 'football';
   user[anotherKey] = false;
   user['favorite music'] = 'rock';
   user['address'] = {};
