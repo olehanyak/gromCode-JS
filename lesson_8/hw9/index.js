@@ -22,6 +22,7 @@ const user1 = {
     name: 'Diego',
     age: 33,
     country: 'Costa Rica',
+    hobby: 'Tenis',
 };
 
 const user2 = {
