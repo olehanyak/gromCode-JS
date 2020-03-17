@@ -10,25 +10,29 @@ const compareObjects = (obj1, obj2) => {
     let isEqual = true;
 
     for (let key of compareObj) {
-        if (compareObj[key] !== compareObj2[key]) {
+        // console.log(key);
+        // console.log(obj2[key]);
+        if (obj1[key] !== obj2[key]) {
+            // console.log(key);
+            console.log(compareObj2);
             return false;
         }
-        return isEqual;
-    };
+        // return true;
+    }
     return isEqual;
 };
 
 const user1 = {
-    name: 'Diego',
+    name: "Diego",
     age: 33,
-    country: 'Costa Rica',
-    hobby: 'Tenis',
+    country: "Costa Rica",
+    // hobby: 'Tenis',
 };
 
 const user2 = {
-    name: 'Diego',
+    name: "Diego",
     age: 33,
-    country: 'Costa Rica',
+    country: "Costa Rica",
 };
 
 console.log(compareObjects(user1, user2));
