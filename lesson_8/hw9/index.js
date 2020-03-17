@@ -7,13 +7,13 @@ const compareObjects = (obj1, obj2) => {
         return false;
     };
 
-    let isEqual;
+    let isEqual = true;
 
     for (let key of compareObj) {
         if (compareObj[key] !== compareObj2[key]) {
-            isEqual = false;
+            return false;
         }
-        isEqual = true;
+        return isEqual;
     };
     return isEqual;
 };
