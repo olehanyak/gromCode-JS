@@ -5,14 +5,18 @@ const compareObjects = (obj1, obj2) => {
     // console.log(compareObj2);
     if (compareObj.length !== compareObj2.length) {
         return false;
-    }
+    };
+
+    let isEqual;
+
     for (let key of compareObj) {
         if (compareObj[key] !== compareObj2[key]) {
-            return false;
+            isEqual = false;
         }
-        return true;
-    }
-}
+        isEqual = true;
+    };
+    return isEqual;
+};
 
 const user1 = {
     name: 'Diego',
