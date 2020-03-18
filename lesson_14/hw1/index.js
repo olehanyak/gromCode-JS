@@ -1,18 +1,18 @@
 let memory = 0;
 
-function add(num) {
+export function add(num) {
     return memory += num;
 };
 
-function decrease(num) {
+export function decrease(num) {
     return memory -= num;
 };
 
-function reset() {
+export function reset() {
     return 0;
 };
 
-function getMemo(num) {
+export function getMemo(num) {
     return num;
 };
 
