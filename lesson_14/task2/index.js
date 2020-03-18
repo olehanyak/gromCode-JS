@@ -1,6 +1,6 @@
 
 
-export const createMessenger = () => {
+export default function createMessenger() {
 
     let message = 'Just learn it!';
 
@@ -8,7 +8,7 @@ export const createMessenger = () => {
 
     function sendMessage(name) {
         
-        console.log(`${name}, ${message}. Your ${sender}`);
+        console.log(`${name}, ${message} Your ${sender}`);
     };
 
     function setMessage(text) {
@@ -37,4 +37,3 @@ export const createMessenger = () => {
 // const messenger3 = createMessenger();
 
 // messenger3.setSender('fontWidth = 700');
-
