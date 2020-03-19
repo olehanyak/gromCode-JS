@@ -1,8 +1,8 @@
-let memory = [];
+// let memory = [];
 
 
-const createLogger = () => {
-    // let memory = [];
+export const createLogger = () => {
+    let memory = [];
 
     function warn(elem) {
         memory.push({
