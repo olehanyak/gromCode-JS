@@ -1,7 +1,7 @@
 // let memory = [];
 
 
-export const createLogger = () => {
+export function createLogger() {
     let memory = [];
 
     function warn(elem) {
@@ -10,7 +10,7 @@ export const createLogger = () => {
             dateTime: 1,
             type: 'warn',
         });
-    }
+    };
 
     function error(elem) {
         memory.push({
@@ -18,7 +18,7 @@ export const createLogger = () => {
             dateTime: 6,
             type: 'error',
         });
-    }
+    };
 
     function log(elem) {
         memory.push({
@@ -26,16 +26,15 @@ export const createLogger = () => {
             dateTime: 4,
             type: 'log',
         });
-    }
+    };
 
-    const getRecords = (memo) => {
-        // if (warn || error || log === '') {
-        // if (memo) {
-            console.log(memo)
-            // return memory.sort((a, b) => b.dateTime - a.dateTime);
-             memo.sort((a, b) => b.dateTime - a.dateTime);
-             console.log(memory)
-        // }
+    function getRecords(memo) {
+        
+        // console.log(memo)
+        // return memory.sort((a, b) => b.dateTime - a.dateTime);
+        memo.sort((a, b) => b.dateTime - a.dateTime);
+        //  console.log(memory)
+        
     };
 
     return {
@@ -48,10 +47,10 @@ export const createLogger = () => {
 
 // console.log(memory)
 
-const logger1 = createLogger();
-logger1.warn('keep out!');
-logger1.error('error!');
-logger1.log('Hello!');
+// const logger1 = createLogger();
+// logger1.warn('keep out!');
+// logger1.error('error!');
+// logger1.log('Hello!');
 
-logger1.getRecords(memory);
+// logger1.getRecords(memory);
 // console.log(logger1)
