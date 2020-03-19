@@ -1,7 +1,6 @@
 // let memory = [];
 
-
-export function createLogger() {
+ export function createLogger() {
     let memory = [];
 
     function warn(elem) {
@@ -29,12 +28,17 @@ export function createLogger() {
     };
 
     function getRecords(memo) {
-        
-        // console.log(memo)
-        // return memory.sort((a, b) => b.dateTime - a.dateTime);
-        memo.sort((a, b) => b.dateTime - a.dateTime);
-        //  console.log(memory)
-        
+        if (memo === undefined) {
+            return memory;
+        }
+        if (memo) {
+            let result = memo.sort((a, b) => b.dateTime - a.dateTime);
+            console.log(result)
+            return result;
+        }
+        if (memo.type === undefined) {
+            return [];
+        }
     };
 
     return {
