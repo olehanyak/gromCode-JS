@@ -1,7 +1,8 @@
 let memory = [];
 
+
 const createLogger = () => {
-// let memory = [];
+    // let memory = [];
 
     function warn(elem) {
         memory.push({
@@ -29,10 +30,12 @@ const createLogger = () => {
 
     const getRecords = (memo) => {
         // if (warn || error || log === '') {
-            if (memo) {
+        // if (memo) {
             console.log(memo)
-            return memo.sort((a, b) => a.dateTime - b.dateTime);
-        }
+            // return memory.sort((a, b) => b.dateTime - a.dateTime);
+             memo.sort((a, b) => b.dateTime - a.dateTime);
+             console.log(memory)
+        // }
     };
 
     return {
@@ -49,4 +52,6 @@ const logger1 = createLogger();
 logger1.warn('keep out!');
 logger1.error('error!');
 logger1.log('Hello!');
+
 logger1.getRecords(memory);
+// console.log(logger1)
