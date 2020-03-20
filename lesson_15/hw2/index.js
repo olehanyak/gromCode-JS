@@ -37,11 +37,11 @@ export function createLogger() {
 
         if (type !== undefined) {
             let result = memory.filter(el => el.type === type)
-            .sort((a, b) => b.dateTime - a.dateTime && b.message - a.message);
+            .sort((a, b) => b.message - a.message);
             console.log(result)
             return result;
         } else {
-            return memory;
+            return memory.sort((a, b) => b.dateTime - a.dateTime);
         };
     };
 
