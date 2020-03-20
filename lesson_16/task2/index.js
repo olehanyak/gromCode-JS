@@ -6,6 +6,6 @@ for(let i = 0; i < 10; i++) {
     }
 }
 
-console.log(arr[6]());
+// console.log(arr[2]());
 
 // export { arr };
