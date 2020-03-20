@@ -7,7 +7,7 @@ export function createLogger() {
     function warn(elem) {
         memory.push({
             message: elem,
-            dateTime: 1,
+            dateTime: new Date(),
             type: 'warn',
         });
     };
@@ -15,7 +15,7 @@ export function createLogger() {
     function error(elem) {
         memory.push({
             message: elem,
-            dateTime: 6,
+            dateTime: new Date(),
             type: 'error',
         });
     };
@@ -23,7 +23,7 @@ export function createLogger() {
     function log(elem) {
         memory.push({
             message: elem,
-            dateTime: 4,
+            dateTime: new Date(),
             type: 'log',
         });
     };
@@ -36,8 +36,9 @@ export function createLogger() {
         // }
 
         if (type !== undefined) {
-            let result = memory.filter(el => el.type === type).sort((a, b) => b.dateTime - a.dateTime);
-            // console.log(result)
+            let result = memory.filter(el => el.type === type)
+            .sort((a, b) => b.dateTime - a.dateTime);
+            console.log(result)
             return result;
         } else {
             return memory;
@@ -52,10 +53,8 @@ export function createLogger() {
     };
 };
 
-// console.log(memory)
-
 // const logger1 = createLogger();
-// logger1.warn('keep out!');
+// logger1.warn('warning');
 // logger1.error('error!');
 // logger1.log('Hello!');
 
