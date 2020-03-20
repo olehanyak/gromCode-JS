@@ -1,6 +1,7 @@
 // let memory = [];
 
- export function createLogger() {
+
+export function createLogger() {
     let memory = [];
 
     function warn(elem) {
@@ -28,18 +29,19 @@
     };
 
     function getRecords(type) {
+        console.log(type)
+        // if (type !== undefined) {
+        //     let result = memory.filter(el => el.type === type);
+        //     return result;
+        // }
+
         if (type !== undefined) {
-            let result = memory.filter(el => el.type === type && el.message === message);
-            return result;
-        }
-        if (memory) {
             let result = memory.sort((a, b) => b.dateTime - a.dateTime);
             console.log(result)
             return result;
-        }
-        // if (memo.type === undefined) {
-        //     return [];
-        // }
+        } else {
+            return memory;
+        };
     };
 
     return {
@@ -57,5 +59,6 @@
 // logger1.error('error!');
 // logger1.log('Hello!');
 
-// logger1.getRecords(memory);
-// console.log(logger1)
+// logger1.getRecords(memory[0].type);
+// logger1.getRecords(memory[1].type);
+// logger1.getRecords(memory[2].type);
