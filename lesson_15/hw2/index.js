@@ -27,18 +27,19 @@
         });
     };
 
-    function getRecords(memo) {
-        if (memo === undefined) {
-            return memory;
+    function getRecords(type) {
+        if (type !== undefined) {
+            let result = memory.filter(el => el.type === type && el.message === message);
+            return result;
         }
-        if (memo) {
-            let result = memo.sort((a, b) => b.dateTime - a.dateTime);
+        if (memory) {
+            let result = memory.sort((a, b) => b.dateTime - a.dateTime);
             console.log(result)
             return result;
         }
-        if (memo.type === undefined) {
-            return [];
-        }
+        // if (memo.type === undefined) {
+        //     return [];
+        // }
     };
 
     return {
