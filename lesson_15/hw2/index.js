@@ -29,15 +29,15 @@ export function createLogger() {
     };
 
     function getRecords(type) {
-        console.log(type)
+        // console.log(type)
         // if (type !== undefined) {
         //     let result = memory.filter(el => el.type === type);
         //     return result;
         // }
 
         if (type !== undefined) {
-            let result = memory.sort((a, b) => b.dateTime - a.dateTime);
-            console.log(result)
+            let result = memory.filter(el => el.type === type).sort((a, b) => b.dateTime - a.dateTime);
+            // console.log(result)
             return result;
         } else {
             return memory;
@@ -62,3 +62,5 @@ export function createLogger() {
 // logger1.getRecords(memory[0].type);
 // logger1.getRecords(memory[1].type);
 // logger1.getRecords(memory[2].type);
+
+// console.log(logger1)
