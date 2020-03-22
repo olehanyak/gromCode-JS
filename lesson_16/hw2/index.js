@@ -6,11 +6,11 @@ function bar() {
     } 
 
     return foo;
-};
+}
 
 var foo = bar();
 
-export default  { foo };
+export default  foo;
 
 // console.log(foo);
-// console.log(bar());
+// console.log(bar())
