@@ -13,10 +13,11 @@ const timer = {
             }
         }, 5000);
     },
-    
+
     getTime() {
-        console.log(`${this.minsPassed}:${this.secondsPassed}`);
-        // return `${this.minsPassed}:${this.secondsPassed}`;
+        // console.log(`${this.minsPassed}:${this.secondsPassed}`);
+        
+        return `${this.minsPassed}:0${this.secondsPassed}`;
     },
 
     stopTimer() {
@@ -25,8 +26,8 @@ const timer = {
     },
 
     resetTime() {
-        this.start = this.secondsPassed === 0;
-        this.start = this.minsPassed === 0;
+        this.secondsPassed === 0;
+        this.minsPassed === 0;
     },
 
     // if (setInterval(this.secondsPassed === 5000)) {
@@ -36,7 +37,10 @@ const timer = {
 
 // timer.resetTime();
 
-export { timer };
+export {
+    timer
+};
+
 
 // let i = 0;
 

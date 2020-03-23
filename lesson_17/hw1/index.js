@@ -20,8 +20,8 @@ const user = {
     },
 };
 
-user.getFullName();
+// user.getFullName();
 
-user.setFullName();
+// user.setFullName();
 
 export { user };
