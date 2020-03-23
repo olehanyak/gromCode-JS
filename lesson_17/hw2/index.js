@@ -8,24 +8,29 @@ const timer = {
 
         this.start = setInterval(() => {
             if (this.secondsPassed === 60) {
-                this.minsPassed += 1;
+                this.minsPassed++;
                 this.secondsPassed = 0;
             }
+            // console.log(this.secondsPassed)
+            // console.log(this.minsPassed)
+            return this.secondsPassed += 5;
+
         }, 5000);
     },
 
     getTime() {
-        // console.log(`${this.minsPassed}:${this.secondsPassed}`);
-        
+        // console.log(`${this.minsPassed}:0${this.secondsPassed}`);
+
         return `${this.minsPassed}:0${this.secondsPassed}`;
     },
 
     stopTimer() {
-        setInterval(this.start);
-        // console.log(setInterval(this.start))
+        clearInterval(this.start);
+        // console.log(clearInterval(this.start))
     },
 
     resetTime() {
+        // console.log(this.secondsPassed)
         this.secondsPassed === 0;
         this.minsPassed === 0;
     },
@@ -35,7 +40,7 @@ const timer = {
     // }
 };
 
-// timer.resetTime();
+timer.startTimer();
 
 export {
     timer
