@@ -11,26 +11,27 @@ const timer = {
                 this.minsPassed++;
                 this.secondsPassed = 0;
             }
-            console.log(this.secondsPassed)
-            console.log(this.minsPassed)
+            // console.log(this.secondsPassed)
+            // console.log(this.minsPassed)
             return this.secondsPassed += 5;
 
         }, 5000);
     },
 
     getTime() {
+        
         if (this.secondsPassed > 5) {
             // console.log(`${this.minsPassed}:0${this.secondsPassed}`);
             return `${this.minsPassed}:0${this.secondsPassed}`;
         } else {
-            // console.log(`${this.minsPassed}:0${this.secondsPassed}`);
-            return `${this.minsPassed}:0${this.secondsPassed}`;
+            // console.log(`${this.minsPassed}:${this.secondsPassed}5`);
+            return `${this.minsPassed}:${this.secondsPassed}5`;
         }
     },
 
     stopTimer() {
-        clearInterval(this.start);
-        // console.log(clearInterval(this.start))
+        clearInterval(this.startTimer());
+        // console.log(clearInterval(this.startTimer()));
     },
 
     resetTime() {
@@ -38,18 +39,14 @@ const timer = {
         this.secondsPassed = 0;
         this.minsPassed = 0;
     },
-
-    // if (setInterval(this.secondsPassed === 5000)) {
-    //     this.secondsPassed += 5;
-    // }
 };
 
-timer.startTimer();
+timer.stopTimer();
 timer.getTime();
 
-export {
-    timer
-};
+// export {
+//     timer
+// };
 
 
 // let i = 0;
