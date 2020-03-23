@@ -44,9 +44,9 @@ const timer = {
 timer.stopTimer();
 timer.getTime();
 
-// export {
-//     timer
-// };
+export {
+    timer
+};
 
 
 // let i = 0;
