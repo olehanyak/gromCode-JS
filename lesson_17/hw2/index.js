@@ -8,8 +8,8 @@ const timer = {
 
         this.start = setInterval(() => {
             if (this.secondsPassed === 60) {
-                this.minsPassed++;
                 this.secondsPassed = 0;
+                this.minsPassed++;
             }
             // console.log(this.secondsPassed)
             // console.log(this.minsPassed)
@@ -30,7 +30,7 @@ const timer = {
     },
 
     stopTimer() {
-        clearInterval(this.startTimer());
+        clearInterval(this.start)
         // console.log(clearInterval(this.startTimer()));
     },
 
