@@ -7,12 +7,11 @@ const user = {
     },
     setFullName(getFullName) {
         // console.log(user.firstName);
-        let a = this.getFullName().split(" ");
+        let a = getFullName.split(" ");
         console.log(a[0]);
-
-        // let a = getFullName.forEach(element => {
-        //     console.log(element);
-        // });
+        // let a = this.getFullName().split(" ");
+        // console.log(a[0]);
+       
         this.firstName = a[0];
         this.lastName = a[1];
     
