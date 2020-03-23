@@ -19,13 +19,13 @@ const timer = {
     },
 
     getTime() {
-        let a = 1;
-        if (this.secondsPassed > 5) {
-            // console.log(`${a}:${this.secondsPassed}5`);
-            return `${a}:${this.secondsPassed}5`;
+
+        if (this.secondsPassed > 9) {
+            // console.log(`${this.minsPassed}:${this.secondsPassed}`);
+            return `${this.minsPassed}:${this.secondsPassed}`;
         } else {
-            // console.log(`${a}:${this.secondsPassed}5`);
-            return `${a}:${this.secondsPassed}5`;
+            // console.log(`${this.minsPassed}:0${this.secondsPassed}`);
+            return `${this.minsPassed}:0${this.secondsPassed}`;
         }
     },
 
@@ -41,8 +41,8 @@ const timer = {
     },
 };
 
-timer.stopTimer();
-timer.getTime();
+// timer.stopTimer();
+// timer.getTime();
 
 export {
     timer
