@@ -19,13 +19,13 @@ const timer = {
     },
 
     getTime() {
-        
+        let a = 1;
         if (this.secondsPassed > 5) {
-            // console.log(`${this.minsPassed}:0${this.secondsPassed}`);
-            return `${this.minsPassed}:0${this.secondsPassed}`;
+            // console.log(`${a}:${this.secondsPassed}5`);
+            return `${a}:${this.secondsPassed}5`;
         } else {
-            // console.log(`${this.minsPassed}:${this.secondsPassed}5`);
-            return `${this.minsPassed}:${this.secondsPassed}5`;
+            // console.log(`${a}:${this.secondsPassed}5`);
+            return `${a}:${this.secondsPassed}5`;
         }
     },
 
