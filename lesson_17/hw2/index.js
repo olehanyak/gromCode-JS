@@ -19,11 +19,11 @@ const timer = {
 
     getTime() {
 
-        if (this.secondsPassed > 9) {
+        if (this.secondsPassed >= 10) {
             // console.log(`${this.minsPassed}:${this.secondsPassed}`);
             return `${this.minsPassed}:${this.secondsPassed}`;
         } else {
-            // console.log(`${this.minsPassed}:${this.secondsPassed + '0'}`);
+            // console.log(`${this.minsPassed}:0${this.secondsPassed}`);
             return `${this.minsPassed}:${this.secondsPassed + '0'}`;
         }
     },
@@ -41,6 +41,6 @@ const timer = {
 };
 
 // timer.startTimer();
-timer.getTime();
+// timer.getTime();
 
 export { timer };
