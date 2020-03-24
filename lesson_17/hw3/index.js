@@ -5,17 +5,17 @@ const person = {
 };
 
 function fun() {
-    console.log(`Hello, mr. ${this.firstName} ${this.lastName}`);
-}
+    console.log(`Hello, mr.${this.firstName} ${this.lastName}`);
+};
 
-
-
-export function bind(func, context) {
+function bind(func, context) {
     let rest = Array.prototype.slice.call(arguments);
-    return function() {
-        let args = Array.prototype.slice.call(arguments);
-        return func.apply(context, rest.concat(args));
+    // console.log(rest)
+    return function () {
+        return func.apply(context, rest);
     }
 };
 
 bind(fun, person)();
+
+export { bind };
