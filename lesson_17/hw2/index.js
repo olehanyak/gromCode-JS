@@ -13,13 +13,11 @@ const timer = {
             }
             // console.log(this.secondsPassed)
             // console.log(this.minsPassed)
-            return this.secondsPassed += 5;
-
+            this.secondsPassed += 5;
         }, 5000);
     },
 
     getTime() {
-
         if (this.secondsPassed < 10) {
             // console.log(`${this.minsPassed}:${this.secondsPassed}`);
             return `${this.minsPassed}:${this.secondsPassed}`;
@@ -30,7 +28,7 @@ const timer = {
     },
 
     stopTimer() {
-        clearInterval(this.start)
+        clearInterval(this.start);
         // console.log(clearInterval(this.startTimer()));
     },
 
@@ -38,29 +36,10 @@ const timer = {
         // console.log(this.secondsPassed)
         this.secondsPassed = 0;
         this.minsPassed = 0;
-    },
+    }
 };
 
-timer.startTimer();
-timer.getTime();
+// timer.startTimer();
+// timer.getTime();
 
-export {
-    timer
-};
-
-
-
-
-// let i = 0;
-
-// let id = setInterval(function() {
-// 	i++;
-
-// 	if (i == 10) {
-// 		clearInterval(id);
-// 	} else {
-// 		console.log(i);
-// 	}
-// }, 1000);
-
-// console.log(id)
+export { timer };
