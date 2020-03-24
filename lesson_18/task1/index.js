@@ -1,13 +1,13 @@
-'use strict';
+// 'use strict';
 
 const event = {
     guests: [
-        { name: 'Tom', email: 'example@Server.com', age: 17 },
-        { name: 'Bob', email: 'example@Server.com', age: 18 },
-        { name: 'Sam', email: 'example@Server.com', age: 22 },
+        { name: 'Tom', age: 17, email: 'example@Server.com', },
+        { name: 'Bob', age: 18, email: 'example@Server.com', },
+        { name: 'Sam', age: 22, email: 'example@Server.com', },
     ],
     message: "Welcome to the party!",
-    getInvintations() {
+    getInvitations() {
         return this.guests
         .filter(({ age }) => age >= 18)
         .map(({ name, email }) => ({
@@ -18,6 +18,6 @@ const event = {
     }
 }
 
-console.log(event.getInvintations());
+console.log(event.getInvitations());
 
 export { event };
