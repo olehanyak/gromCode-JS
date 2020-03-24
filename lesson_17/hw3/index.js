@@ -11,11 +11,13 @@ function fun() {
 function bind(func, context) {
     let rest = Array.prototype.slice.call(arguments);
     // console.log(rest)
+    // console.log(Array.prototype)
     return function () {
         return func.apply(context, rest);
     }
 };
 
+bind(fun, person)();
 bind(fun, person)();
 
 export { bind };
