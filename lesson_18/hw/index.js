@@ -12,8 +12,8 @@ function saveCalls(allCalls) {
         withMemory.calls.bind([...arguments]);
         return allCalls.apply(this, arguments);
     }
-    arg.calls = [];
-    return arg;
+    withMemory.calls = [];
+    return withMemory;
 
 };
 
