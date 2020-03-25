@@ -1,15 +1,24 @@
+const footballClub = {
+    name: 'Liverpool',
+    country: 'England',
+    color: 'red',
+    stadium: 'Enfield',
+};
 
 function saveCalls(allCalls) {
 
     // let calls = [];
-    return function withMemory() {
+    function withMemory() {
         withMemory.calls.bind([...arguments]);
         return allCalls.apply(this, arguments);
     }
-    
+    arg.calls = [];
+    return arg;
+
 };
 
-export { saveCalls };
+export {
+    saveCalls
+};
 
 // =============================================================
-
