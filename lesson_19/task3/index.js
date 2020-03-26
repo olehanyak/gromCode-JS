@@ -6,7 +6,7 @@ const user = {
         // console.log(`${this.firstName} ${this.lastName}`);
     },
     set fullName(value) {
-        let [firstName, lastName] = value.split(' ');
+        const [firstName, lastName] = value.split(' ');
         this.firstName = firstName;
         this.lastName = lastName;
     },
@@ -17,6 +17,4 @@ const user = {
 
 // user.fullName
 
-export default {
-    user
-};
+export default user;
