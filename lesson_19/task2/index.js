@@ -22,17 +22,19 @@ const ship = {
 };
 
 function getOwnProps(value) {
-    console.log(Object.keys(value))
-    return Object.keys(value);
-    // for (let prop in value) {
-    //     if (value.hasOwnProperty(prop)) {
-    //     console.log(prop);
-    //     // return prop;
-    //     };
-    // };
+    // console.log(Object.keys(value))
+    // return Object.keys(value);
+    for (let prop in value) {
+        if (value.hasOwnProperty(prop)) {
+            // console.log(prop);
+            return [prop];
+        };
+    };
 };
 
 
-getOwnProps(ship);
+console.log(getOwnProps(ship));
 
-export { getOwnProps };
+export {
+    getOwnProps
+};
