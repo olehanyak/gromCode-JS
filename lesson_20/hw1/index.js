@@ -34,3 +34,5 @@ console.log(newOrder)
 console.log(newOrder.checkPrice());
 console.log(newOrder.confirmOrder());
 console.log(newOrder.isValidType());
+
+export { Order };
