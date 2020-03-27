@@ -10,7 +10,7 @@ class Wallet {
     } 
     withDraw(amount) {
         if (amount > this._balance) {
-            console.log('No enough founds');
+            console.log('No enough funds');
             return;
         }
         this._balance -= amount;
@@ -23,6 +23,7 @@ class Wallet {
 // walletUser.deposit(100);
 // console.log(walletUser.getBalance());
 // walletUser.withDraw(45);
+// walletUser.withDraw(100);
 // console.log(walletUser.getBalance());
 
 export { Wallet };
