@@ -1,12 +1,13 @@
 class Wallet {
     balance = 0;
+
     getBalance() {
         return this.balance;
     }
     deposit(amount) {
         this.balance += amount;
     }
-    withDraw(amount) {
+    withdraw(amount) {
         if (amount > this.balance) {
             console.log('No enough funds');
             return;
@@ -15,7 +16,7 @@ class Wallet {
     }
 };
 
-// const walletUser = new Wallet();
+const walletUser = new Wallet();
 
 // console.log(walletUser.getBalance());
 // walletUser.deposit(100);
@@ -24,6 +25,4 @@ class Wallet {
 // walletUser.withDraw(100);
 // console.log(walletUser.getBalance());
 
-export {
-    Wallet
-};
+export { Wallet };
