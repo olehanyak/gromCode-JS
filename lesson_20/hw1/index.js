@@ -3,8 +3,8 @@ class Order {
         this.id = `${Math.random()}`;
         this.price = price;
         this.dateCreated = new Date();
-        this.isConfirmed = true;
-        this.dateConfirmed = new Date();
+        this.isConfirmed = false;
+        this.dateConfirmed = null;
         this.city = city;
         this.type = type;
     }
@@ -17,7 +17,7 @@ class Order {
     }
 
     confirmOrder() {
-        if (this.isConfirmed === null) {
+        if (!this.isConfirmed) { 
             this.isConfirmed = true;
             this.dateConfirmed = new Date();
         }
