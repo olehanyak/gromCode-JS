@@ -8,15 +8,15 @@ class User {
         return new User;
     }
 
-    sayHi = function () {
+    sayHi() {
         console.log(`Hi, I am ${this.name}`);
-    };
+    }
 
-    requestNewPhoto = function () {
+    requestNewPhoto() {
         console.log(`New photo request was sent for ${this.name}`);
-    };
+    }
 
-    setAge = function (age) {
+    setAge(age) {
         this.age = age;
         // console.log(age);
 
@@ -29,9 +29,8 @@ class User {
             // this.age = age;
         }
         return age;
-    };
+    }
 };
-
 
 const anotherUser1 = new User("Olaf", 3);
 console.log(User.createEmpty());
