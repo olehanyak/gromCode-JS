@@ -5,7 +5,7 @@ class User {
     }
 
     static createEmpty() {
-        return new User;
+        return new User();
     }
 
     sayHi() {
@@ -32,8 +32,8 @@ class User {
     }
 };
 
-const anotherUser1 = new User("Olaf", 3);
-console.log(User.createEmpty());
+// const anotherUser1 = new User("Olaf", 3);
+// console.log(User.createEmpty());
 
 // anotherUser1.sayHi()
 // anotherUser1.setAge()
