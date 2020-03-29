@@ -18,30 +18,41 @@ class User {
 };
 
 class UserRepository extends User {
-    constructor(users) {
-        super(users);
-        this.users = Object.freeze(users);
+    constructor(id, name, sessionId, users) {
+        super(id, name, sessionId, users);
+        this._users = Object.freeze(users);
+    }
+
+    get users() {
+        return this._users;
     }
 
     getUserNames() {
-        return this._name;
+        return this._users.map(pers => pers._name);
     }
 
     getUserIds() {
-        return this._id;
+        return this._users.map(pers => pers._id);
     }
 
-    getUserNameById(){
-        return this._sessionId;
+    getUserNameById(id) {
+        for (let user of this._users) {
+            if (user.id === id) {
+                return user.name;
+            }
+        }
     }
 };
 
-const usersArr = new User(`${Math.random()}`, 'eron', 'red', ['Lynn', 'Freddy', 'Mark', 'Spiderman']);
+const usersArr = new User();
 
 console.log(usersArr);
 
-const getUsersData = new UserRepository('ooo');
+const getUsersData = new UserRepository(`${Math.random()}`, 'Leon', '12345', ['Lynn', 'Freddy', 'Mark', 'Spiderman']);
 
 console.log(getUsersData);
+console.log(getUsersData.getUserNames());
+console.log(getUsersData.getUserIds());
+console.log(getUsersData.getUserNameById());
 
 export { User, UserRepository };
