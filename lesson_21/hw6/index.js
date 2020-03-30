@@ -4,6 +4,6 @@ function clearList() {
     // console.log(getClearList)
 };
 
-clearList();
+// clearList();
 
 export { clearList };
