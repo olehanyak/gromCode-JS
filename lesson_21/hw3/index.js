@@ -3,27 +3,27 @@ function getTitle() {
     // console.log(getContent.textContent);
 };
 
-getTitle();
+// getTitle();
 
 function getDescription() {
     return document.querySelector('.about').innerText;
     // console.log(getContent.innerText);
 };
 
-getDescription();
+// getDescription();
 
 function getPlans() {
     return document.querySelector('.plans').innerHTML;
     // console.log(getContent.innerHTML);
 };
 
-getPlans();
+// getPlans();
 
 function getGoal() {
     return document.querySelector('.goal').outerHTML;
     // console.log(getContent.outerHTML);
 };
 
-getGoal();
+// getGoal();
 
 export { getTitle, getDescription, getPlans, getGoal };
