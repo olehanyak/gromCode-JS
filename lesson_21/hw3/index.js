@@ -1,31 +1,27 @@
 function getTitle() {
-    const getContent = document.querySelector('.title');
+    return document.querySelector('.title').textContent;
     // console.log(getContent.textContent);
-    return getContent.textContent;
 };
 
 getTitle();
 
 function getDescription() {
-    const getContent = document.querySelector('.about');
+    return document.querySelector('.about').innerText;
     // console.log(getContent.innerText);
-    return getContent.innerText;
 };
 
 getDescription();
 
 function getPlans() {
-    const getContent = document.querySelector('.plans');
+    return document.querySelector('.plans').innerHTML;
     // console.log(getContent.innerHTML);
-    return getContent.innerHTML;
 };
 
 getPlans();
 
 function getGoal() {
-    const getContent = document.querySelector('.goal');
+    return document.querySelector('.goal').outerHTML;
     // console.log(getContent.outerHTML);
-    return getContent.outerHTML;
 };
 
 getGoal();
