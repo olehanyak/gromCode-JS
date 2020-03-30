@@ -1,10 +1,11 @@
 function setTitle(text) {
-    text.textContent;
-    console.log(text.textContent)
+    const setText = document.querySelector('.title');
+    setText.textContent = text;
+    // console.log(setText)
 };
 
-const setText = document.querySelector('.title');
 
-setTitle(setText);
+
+// setTitle('hg');
 
 export{ setTitle };
