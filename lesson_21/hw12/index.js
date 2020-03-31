@@ -14,6 +14,6 @@ function getSection(num) {
     return getDataSection;
 }
 
-getSection(5);
+// getSection(5);
 
 export { getSection };
