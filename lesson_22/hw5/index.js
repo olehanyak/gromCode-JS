@@ -2,6 +2,6 @@ const myClickHandler = () => {
     console.log('clicked')
 };
 
-document.querySelector('.single-use-btn').addEventListener('click', myClickHandler, {
-    once: true,
-});
+const onceClick = document.querySelector('.single-use-btn');
+
+onceClick.addEventListener('click', myClickHandler, {once: true});
