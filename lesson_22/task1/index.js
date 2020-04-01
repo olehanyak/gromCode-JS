@@ -53,7 +53,7 @@ clearBtn.addEventListener('click', clearArea);
 
 attachBtn.addEventListener('click', attacher);
 
-removeBtn.addEventListener('click', remover.bind());
+removeBtn.addEventListener('click', remover);
 
 attacher();
-remover();
+// remover();
