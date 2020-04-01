@@ -4,8 +4,8 @@ const spanElem = document.querySelector('.rect_span');
 const eventsListElem = document.querySelector('.events-list');
 
 const clearBtn = document.querySelector('.clear-btn');
-const attachBtn = document.querySelector('.attach-headlers-btn');
-const removeBtn = document.querySelector('.remove-headlers-btn');
+const attachBtn = document.querySelector('.attach-handlers-btn');
+const removeBtn = document.querySelector('.remove-handlers-btn');
 
 
 const logTarget = (text, color) => {
@@ -23,7 +23,7 @@ const logGreyP = logTarget.bind(null, 'P', 'grey');
 const logGreySpan = logTarget.bind(null, 'SPAN', 'grey');
 
 
-const attacher = () => {
+function attacher () {
     divElem.addEventListener('click', logGreyDiv, true);
     divElem.addEventListener('click', logGreenDiv);
 
@@ -51,7 +51,7 @@ const clearArea = () => {
 
 clearBtn.addEventListener('click', clearArea);
 
-attachBtn.addEventListener('click', attacher.bind());
+attachBtn.addEventListener('click', attacher);
 
 removeBtn.addEventListener('click', remover.bind());
 
