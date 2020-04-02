@@ -22,6 +22,7 @@ const tasks = [{
 
 const renderListItem = listItems => {
     const listElement = document.querySelector('.list');
+    listElement.innerHTML = '';
 
     const listItemsElements = listItems
         .sort((a, b) => a.done - b.done)
@@ -51,22 +52,20 @@ const getValueInput = document.querySelector('.task-input');
 
 const btn = document.querySelector('.create-task-btn');
 
-console.log(btn)
-
 function create() {
     tasks.push({
         text: getValueInput.value,
         done: false,
     });
-    const newList = document.createElement('li');
-    newList.classList.add('list__item');
+    // const newList = document.createElement('li');
+    // newList.classList.add('list__item');
 
     if (getValueInput.value === '') return false;
     getValueInput.value = '';
 
-    renderListItem(tasks);
+    return renderListItem(tasks);
 };
 
 btn.addEventListener('click', create);
 
-// renderListItem(tasks);
+renderListItem(tasks);
