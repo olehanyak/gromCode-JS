@@ -54,7 +54,7 @@ function getPopulation(population) {
 // используйте объект country
 // ... your code here
 
-getPopulation.apply(country, [42000000]);
+getPopulation.apply(country, [43000]);
 
 /* ===> 4 <=== */
 const transaction = {
