@@ -40,9 +40,9 @@ export function greeting(firstName, lastName) {
 // используйте объект company
 // ... your code here
 
-const greetPerson = greeting.bind(company, 'Bob', 'Marley');
+const sayBruceName = greeting.bind(company, 'Bob', 'Marley');
 
-greetPerson();
+sayBruceName();
 
 
 /* ===> 3 <=== */
@@ -92,4 +92,4 @@ const printSpecialTransaction = transaction.printTransaction.bind(anotherTransac
 
 printSpecialTransaction();
 
-export { sayStudentName, sayBruceName, greetPerson, getUkrainePopulation, printSpecialTransaction };
+export { sayStudentName, sayBruceName, getUkrainePopulation, printSpecialTransaction };
