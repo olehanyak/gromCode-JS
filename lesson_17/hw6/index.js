@@ -10,9 +10,9 @@ export function sayName() {
 // вызовите ф-цию sayName так, чтобы в консоль вывелось имя студента 
 // ... your code here
 
-const getStudentName = sayName.bind(student);
+const sayStudentName = sayName.bind(student);
 
-getStudentName();
+sayStudentName();
 
 // вызовите ф-цию sayName так, чтобы в консоль вывелось имя 'Bruce' (используйте другой объект)
 // ... your code here
@@ -21,9 +21,9 @@ const student2 = {
     name: 'Bruce',
 };
 
-const getStudentName2 = sayName.bind(student2);
+const sayBruceName = sayName.bind(student2);
 
-getStudentName2();
+sayBruceName();
 
 
 /* ===> 2 <=== */
@@ -61,9 +61,9 @@ export function getPopulation(population) {
 // используйте объект country
 // ... your code here
 
-const getPopulationInUkraine = getPopulation.bind(country, 43000);
+const getUkrainePopulation = getPopulation.bind(country, 43000);
 
-getPopulationInUkraine();
+getUkrainePopulation();
 
 /* ===> 4 <=== */
 const transaction = {
@@ -88,8 +88,8 @@ const anotherTransaction = {
 // используйте объект anotherTransaction как контекст
 // ... your code here
 
-const getTransaction = transaction.printTransaction.bind(anotherTransaction);
+const printSpecialTransaction = transaction.printTransaction.bind(anotherTransaction);
 
-getTransaction();
+printSpecialTransaction();
 
-export { getStudentName, getStudentName2, greetPerson, getPopulationInUkraine, getTransaction };
+export { sayStudentName, sayBruceName, greetPerson, getUkrainePopulation, printSpecialTransaction };
