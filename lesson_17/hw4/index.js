@@ -46,6 +46,7 @@ const country = {
 };
 
 function getPopulation(population) {
+    // console.log(`Population in ${this.countryName} is ${population}`)
     return `Population in ${this.countryName} is ${population}`;
 }
 
@@ -54,7 +55,7 @@ function getPopulation(population) {
 // используйте объект country
 // ... your code here
 
-getPopulation.call(country, 43000);
+getPopulation.call(country, 43000000);
 
 
 /* ===> 4 <=== */
