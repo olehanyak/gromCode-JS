@@ -91,3 +91,5 @@ const anotherTransaction = {
 const getTransaction = transaction.printTransaction.bind(anotherTransaction);
 
 getTransaction();
+
+export { getStudentName, getStudentName2, greetPerson, getPopulationInUkraine, getTransaction };
