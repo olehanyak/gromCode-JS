@@ -55,7 +55,7 @@ function getPopulation(population) {
 // используйте объект country
 // ... your code here
 
-getPopulation.call(country, '43000');
+getPopulation.call(country, 43000);
 
 
 /* ===> 4 <=== */
