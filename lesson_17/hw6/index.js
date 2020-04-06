@@ -1,3 +1,5 @@
+
+
 /* ===> 1 <=== */
 const student = {
     name: 'Tom',
@@ -7,16 +9,17 @@ function sayName() {
     console.log(this.name);
 }
 
-// вызовите ф-цию sayName так, чтобы в консоль вывелось имя студента 
-// ... your code here
-
+/*
+ * создайте ф-цию sayStudentName которая будет выводить в консоль имя студента 'Tom'
+ * используйте .bind и ф-цию sayName
+ */
 const sayStudentName = sayName.bind(student);
 
 sayStudentName();
-
-// вызовите ф-цию sayName так, чтобы в консоль вывелось имя 'Bruce' (используйте другой объект)
-// ... your code here
-
+/*
+ * создайте ф-цию sayBruceName которая будет выводить в консоль имя 'Bruce'
+ * используйте ф-цию sayName и .bind с нужным объектом
+ */
 const student2 = {
     name: 'Bruce',
 };
@@ -24,7 +27,6 @@ const student2 = {
 const sayBruceName = sayName.bind(student2);
 
 sayBruceName();
-
 
 /* ===> 2 <=== */
 const company = {
@@ -35,14 +37,15 @@ function greeting(firstName, lastName) {
     console.log(`Hello, ${firstName} ${lastName}. Welcome to the ${this.companyName}`);
 }
 
-// вызовите ф-цию greeting так, чтобы в консоль вывелось 
-// 'Hello, Bob Marley. Welcome to the Microsoft'
-// используйте объект company
-// ... your code here
+/*
+ * создайте ф-цию specialGreeting которая будет выводить в консоль
+ * 'Hello, Bob Marley. Welcome to the Microsoft`
+ * используйте ф-цию greeting и .bind с нужным объектом и аргументами
+ * specialGreeting не должна принимать ни одного аргумента
+ */
+const specialGreeting = greeting.bind(company, 'Bob', 'Marley');
 
-const greetingBob = greeting.bind(company, 'Bob', 'Marley');
-
-greetingBob();
+specialGreeting();
 
 
 /* ===> 3 <=== */
@@ -52,18 +55,21 @@ const country = {
 };
 
 function getPopulation(population) {
-    console.log(`Population in ${this.countryName} is ${population}`)
     return `Population in ${this.countryName} is ${population}`;
 }
 
-// вызовите ф-цию getPopulation так, чтобы она вернула 
-// 'Population in Ukraine is 43000'
-// используйте объект country
-// ... your code here
+/*
+ * создайте ф-цию getUkrainePopulation которая будет возвращать строку
+ * 'Population in Ukraine is 43000`
+ * используйте ф-цию getPopulation и .bind с нужным объектом и аргументами
+ * getUkrainePopulation не должна принимать ни одного аргумента
+ */
 
 const getUkrainePopulation = getPopulation.bind(country, 43000);
 
 getUkrainePopulation();
+
+
 
 /* ===> 4 <=== */
 const transaction = {
@@ -83,13 +89,16 @@ const anotherTransaction = {
     exchange: 'NASDAQ',
 };
 
-// вызовите метод transaction.printTransaction так, чтобы в консоль вывелось
-// '400 USD - buy on NASDAQ'
-// используйте объект anotherTransaction как контекст
-// ... your code here
+/*
+ * создайте ф-цию printSpecialTransaction которая будет выводить в консоль
+ * '400 USD - buy on NASDAQ`
+ * используйте метод transaction.printTransaction и .bind с нужным объектом
+ * printSpecialTransaction не должна принимать ни одного аргумента
+ */
+
 
 const printSpecialTransaction = transaction.printTransaction.bind(anotherTransaction);
 
 printSpecialTransaction();
 
-export { sayStudentName, sayBruceName, greetingBob, getUkrainePopulation, printSpecialTransaction };
+export { sayStudentName, sayBruceName, specialGreeting, getUkrainePopulation, printSpecialTransaction };
