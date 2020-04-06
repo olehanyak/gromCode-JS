@@ -25,9 +25,9 @@ const getAction = {
     operation: '*',
 };
 
-const multiplier = calculator.bind(getAction, 3, 3);
+const multiplier = calculator.bind(getAction);
 
-console.log(multiplier());
+console.log(multiplier(3, 3));
 
 /*
  * Ф-ция summator должна быть создана на основе calculator
@@ -40,8 +40,8 @@ const getAction2 = {
     operation: '+',
 };
 
-const summator = calculator.bind(getAction2, 5, 5);
-console.log(summator());
+const summator = calculator.bind(getAction2);
+console.log(summator(5, 5));
 
 /*
  * Ф-ция twice должна быть создана на основе calculator
@@ -54,7 +54,7 @@ const getAction3 = {
     operation: '*',
 };
 
-const twice = calculator.bind(getAction3, 4);
-console.log(twice(2));
+const twice = calculator.bind(getAction3, 2);
+console.log(twice(10));
 
 export { multiplier, summator, twice };
