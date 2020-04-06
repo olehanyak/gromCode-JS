@@ -21,9 +21,9 @@ const student2 = {
     name: 'Bruce',
 };
 
-const sayBruceName = sayName.bind(student2);
+const sayBruceName2 = sayName.bind(student2);
 
-sayBruceName();
+sayBruceName2();
 
 
 /* ===> 2 <=== */
@@ -40,9 +40,9 @@ function greeting(firstName, lastName) {
 // используйте объект company
 // ... your code here
 
-const greetingBob = greeting.bind(company, 'Bob', 'Marley');
+const sayBruceName = greeting.bind(company, 'Bob', 'Marley');
 
-greetingBob();
+sayBruceName();
 
 
 /* ===> 3 <=== */
@@ -92,4 +92,4 @@ const printSpecialTransaction = transaction.printTransaction.bind(anotherTransac
 
 printSpecialTransaction();
 
-export { sayStudentName, sayBruceName, greetingBob, getUkrainePopulation, printSpecialTransaction };
+export { sayStudentName, sayBruceName, sayBruceName2, getUkrainePopulation, printSpecialTransaction };
