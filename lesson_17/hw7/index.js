@@ -21,11 +21,13 @@ function calculator(a, b) {
  */
 // ...your code here
 
-const multiplier = calculator.bind(3, 3);
+const getAction = {
+    operation: '*',
+};
+
+const multiplier = calculator.bind(getAction, 3, 3);
 
 console.log(multiplier());
-console.log(multiplier);
-
 
 /*
  * Ф-ция summator должна быть создана на основе calculator
@@ -34,7 +36,11 @@ console.log(multiplier);
  */
 // ...your code here
 
-const summator = calculator.bind(5 * 5);
+const getAction2 = {
+    operation: '+',
+};
+
+const summator = calculator.bind(getAction2, 5, 5);
 console.log(summator());
 
 /*
@@ -44,7 +50,11 @@ console.log(summator());
  */
 // ...your code here
 
-const twice = calculator.bind(4);
-console.log(twice());
+const getAction3 = {
+    operation: '*',
+};
+
+const twice = calculator.bind(getAction3, 4);
+console.log(twice(2));
 
 export { multiplier, summator, twice };
