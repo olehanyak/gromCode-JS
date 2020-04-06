@@ -21,9 +21,9 @@ const student2 = {
     name: 'Bruce',
 };
 
-const sayBruceName2 = sayName.bind(student2);
+const sayBruceName = sayName.bind(student2);
 
-sayBruceName2();
+sayBruceName();
 
 
 /* ===> 2 <=== */
@@ -92,4 +92,4 @@ const printSpecialTransaction = transaction.printTransaction.bind(anotherTransac
 
 printSpecialTransaction();
 
-export { sayStudentName, sayBruceName, sayBruceName2, getUkrainePopulation, printSpecialTransaction };
+export { sayStudentName, sayBruceName, sayBruceName, getUkrainePopulation, printSpecialTransaction };
