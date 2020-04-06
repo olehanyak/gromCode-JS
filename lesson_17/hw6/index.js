@@ -3,7 +3,7 @@ const student = {
     name: 'Tom',
 };
 
-export function sayName() {
+function sayName() {
     console.log(this.name);
 }
 
@@ -31,7 +31,7 @@ const company = {
     companyName: 'Microsoft'
 };
 
-export function greeting(firstName, lastName) {
+function greeting(firstName, lastName) {
     console.log(`Hello, ${firstName} ${lastName}. Welcome to the ${this.companyName}`);
 }
 
@@ -51,7 +51,7 @@ const country = {
     capital: 'Kyiv'
 };
 
-export function getPopulation(population) {
+function getPopulation(population) {
     console.log(`Population in ${this.countryName} is ${population}`)
     return `Population in ${this.countryName} is ${population}`;
 }
