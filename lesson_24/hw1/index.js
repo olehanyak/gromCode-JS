@@ -23,4 +23,4 @@ const myDate = getDiff(startDate, endDate);
 
 console.log(myDate);
 
-// export { getDiff };
+export { getDiff };
