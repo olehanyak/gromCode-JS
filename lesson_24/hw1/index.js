@@ -16,8 +16,8 @@ const getDiff = (startDate, endDate) => {
     return `${newDay}d ${newHour}h ${newMin}m ${newSec}s`;
 };
 
-const startDate = new Date(2000, 10, 10, 10, 10);
-const endDate = new Date(1982, 9, 10, 10, 10, 10);
+const startDate = new Date(2000, 5, 10, 10, 10);
+const endDate = new Date(2010, 10, 10, 10, 10, 10);
 
 const myDate = getDiff(startDate, endDate);
 
