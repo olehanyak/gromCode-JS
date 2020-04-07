@@ -30,4 +30,4 @@ const studentsBirthDays = allStudents => {
 
 studentsBirthDays(students)
 
-// export { studentsBirthDays };
+export { studentsBirthDays };
