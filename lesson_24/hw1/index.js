@@ -6,9 +6,8 @@ const getDiff = (startDate, endDate) => {
 
     console.log(startDate)
 
-    // const getNewDate = new Date(end - start);
-    const getNewDate = new Date(endNewDate - startNewDate);
-    console.log(getNewDate);
+    if (startDate < endDate)
+    getNewDate = new Date(endDate) - new Date(startDate);
 
     const newDay = parseInt(getNewDate / (1000 * 60 * 60 * 24));
     const newHour = parseInt((getNewDate / (1000 * 60 * 60)) % 24);
