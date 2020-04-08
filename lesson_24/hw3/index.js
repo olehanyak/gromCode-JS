@@ -47,6 +47,7 @@ const renderListItem = listItems => {
         })
 
         .map(({ text, done }) => {
+            console.log(text, done)
             const listItemElement = document.createElement("li");
             listItemElement.classList.add("list__item");
             if (done) {
