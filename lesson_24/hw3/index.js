@@ -65,7 +65,7 @@ const renderListItem = listItems => {
     listElement.append(...listItemsElements);
 };
 
-// --------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------
 
 const getValueInput = document.querySelector(".task-input");
 // console.log(getValueInput.value)
@@ -90,7 +90,7 @@ console.log(createNewTask())
 
 btn.addEventListener("click", createNewTask);
 
-// -----------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------
 
 const choiceList = document.querySelector(".list");
 
@@ -109,8 +109,9 @@ function check(e) {
 
 choiceList.addEventListener("click", check);
 
-renderListItem(tasks);
-// ===============================================
+// renderListItem(tasks);
+
+// ====================================================================================
 
 
 
