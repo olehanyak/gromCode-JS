@@ -45,7 +45,7 @@ const renderListItem = listItems => {
             };
             return new Date(b.startEvent) - new Date(a.startEvent);
         })
-        
+
         .map(({ text, done }) => {
             const listItemElement = document.createElement("li");
             listItemElement.classList.add("list__item");
@@ -60,7 +60,9 @@ const renderListItem = listItems => {
 
             return listItemElement;
         });
-listElement.append(...listItemsElements);
+    console.log(listItemsElements)
+
+    listElement.append(...listItemsElements);
 };
 
 // --------------------------------------------------------------------------
@@ -77,14 +79,18 @@ function createNewTask() {
         startEvent: new Date(),
         endEvent: new Date(),
     });
+    console.log(tasks)
 
     if (getValueInput.value === "") return false;
     getValueInput.value = "";
 
     return renderListItem(tasks);
 };
+console.log(createNewTask())
 
 btn.addEventListener("click", createNewTask);
+
+// -----------------------------------------------------------------------------------
 
 const choiceList = document.querySelector(".list");
 
