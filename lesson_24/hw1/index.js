@@ -1,10 +1,11 @@
 
 const startNewDate = new Date();
-const endNewDate = new Date(2025, 1, 10, 10, 10, 10);
+const endNewDate = new Date(2021, 1, 10, 10, 10, 10);
 
 const getDiff = (startDate, endDate) => {
 
     console.log(startDate)
+    let getNewDate = new Date(startDate - endDate);
 
     if (startDate < endDate)
     getNewDate = new Date(endDate) - new Date(startDate);
