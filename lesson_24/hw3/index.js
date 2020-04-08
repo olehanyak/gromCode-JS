@@ -60,7 +60,8 @@ const renderListItem = listItems => {
 
             return listItemElement;
         });
-    console.log(listItemsElements)
+
+    // console.log(listItemsElements)
 
     listElement.append(...listItemsElements);
 };
@@ -79,14 +80,14 @@ function createNewTask() {
         startEvent: new Date(),
         endEvent: new Date(),
     });
-    console.log(tasks)
+    // console.log(tasks)
 
     if (getValueInput.value === "") return false;
     getValueInput.value = "";
 
     return renderListItem(tasks);
 };
-console.log(createNewTask())
+// console.log(createNewTask())
 
 btn.addEventListener("click", createNewTask);
 
@@ -99,8 +100,8 @@ function check(e) {
     console.log(e.target.parentNode.textContent);
     similar.done = e.target.checked;
 
-    console.log(e.target.checked);
-    console.log(similar.done);
+    // console.log(e.target.checked);
+    // console.log(similar.done);
 
     similar.endEvent = similar.done ? new Date() : undefined;
 
