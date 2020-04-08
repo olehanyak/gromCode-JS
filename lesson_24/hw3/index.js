@@ -109,7 +109,7 @@ function check(e) {
 
 choiceList.addEventListener("click", check);
 
-// renderListItem(tasks);
+renderListItem(tasks);
 
 // ====================================================================================
 
