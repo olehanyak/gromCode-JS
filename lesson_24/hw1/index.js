@@ -4,9 +4,7 @@ const endNewDate = new Date(2025, 1, 10, 10, 10, 10);
 
 const getDiff = (startDate, endDate) => {
 
-    console.log(new Date(startDate))
     console.log(startDate)
-    console.log(new Date(endDate))
 
     // const getNewDate = new Date(end - start);
     const getNewDate = new Date(endNewDate - startNewDate);
