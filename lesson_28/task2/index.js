@@ -36,3 +36,5 @@ const markFavorites = (tree, favorites) => {
 const result = markFavorites(tree, favorites);
 
 console.log(result);
+
+export { markFavorites };
