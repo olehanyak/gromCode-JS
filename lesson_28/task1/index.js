@@ -4,14 +4,14 @@ const calc = initValue => {
     const calculator = {
         add(value) {
             result += value;
+            return calculator;
+        },
+        subtract(value) {
+            result -= value;
             return this;
         },
         mult(value) {
             result *= value;
-            return this;
-        },
-        substract(value) {
-            result -= value;
             return this;
         },
         div(value) {
@@ -20,8 +20,9 @@ const calc = initValue => {
         },
         result() {
             return result;
-        },
+        }
     };
+
     return calculator;
 };
 
