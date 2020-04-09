@@ -1,5 +1,5 @@
-import { renderTasks } from './renderer.js';
-import { getItem, setItem } from './storage.js';
+import { renderTasks } from './renderer';
+import { getItem, setItem } from './storage';
 
 export const onToggleTask = e => {
     const isCheckbox = e.target.classList.contains('list__item-checkbox');
@@ -7,6 +7,7 @@ export const onToggleTask = e => {
     if (!isCheckbox) {
         return;
     }
+
     const tasksList = getItem('tasksList');
     const newTasksList = tasksList
         .map(tasks => {

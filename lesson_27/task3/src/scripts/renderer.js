@@ -1,4 +1,4 @@
-import { getItem } from "./storage.js";
+import { getItem } from "./storage";
 
 const tasks = [
     {
@@ -47,7 +47,7 @@ const compareTasks = (a, b) => {
     return new Date(b.startEvent) - new Date(a.startEvent);
 };
 
-const createCheckbox = ({ id, done }) => {
+const createCheckbox = ({ done, id }) => {
     const checkboxElem = document.createElement('input');
     checkboxElem.setAttribute('type', 'checkbox');
     checkboxElem.setAttribute('data-id', id);
@@ -70,9 +70,9 @@ const createListItem = ({ text, done, id }) => {
 };
 
 export const renderTasks = () => {
-    const tasksList = getItem('tasksList') || [];
+    const tasksList = getItem("tasksList") || [];
 
-    listElem.innerHTML = '';
+    listElem.innerHTML = "";
     console.log(listElem)
     const tasksElems = tasksList
         .sort(compareTasks)
