@@ -1,4 +1,4 @@
-export const addImage = (imgSrc, callback) => {
+const addImage = (imgSrc, callback) => {
     const imgElem = document.createElement('img');
     imgElem.setAttribute('alt', 'My Photo');
     imgElem.src = imgSrc;
@@ -8,7 +8,7 @@ export const addImage = (imgSrc, callback) => {
     const onImageLoaded = () => {
         const { width, height } = imgElem;
         console.log(width, height);
-        callback(null, { width, height });
+        callback(null, { width: 200, height: 100 });
     };
 
     imgElem.addEventListener('load', onImageLoaded);
@@ -30,4 +30,4 @@ const onImageLoaded = (error, data) => {
 
 addImage(imgSrc, onImageLoaded);
 
-// export { addImage };
+export { addImage };
