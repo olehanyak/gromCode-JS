@@ -1,4 +1,4 @@
-const addImage = (imgSrc, callback) => {
+export const addImage = (imgSrc, callback) => {
     const imgElem = document.createElement('img');
     imgElem.setAttribute('alt', 'My Photo');
     imgElem.src = imgSrc;
@@ -8,7 +8,7 @@ const addImage = (imgSrc, callback) => {
     const onImageLoaded = () => {
         const { width, height } = imgElem;
         console.log(width, height);
-        callback(null, { width: 200, height: 100 });
+        callback(null, { width, height });
     };
 
     imgElem.addEventListener('load', onImageLoaded);
@@ -16,7 +16,7 @@ const addImage = (imgSrc, callback) => {
     imgElem.addEventListener('error', () => callback('Image load failed'));
 };
 
-const imgSrc = 'https://server.com/image.png';
+const imgSrc = 'https://surlybikes.com/uploads/bikes/_medium_image/Straggler_BK7804.jpg';
 
 const onImageLoaded = (error, data) => {
     if (error) {
@@ -30,4 +30,4 @@ const onImageLoaded = (error, data) => {
 
 addImage(imgSrc, onImageLoaded);
 
-export { addImage };
+// export { addImage };
