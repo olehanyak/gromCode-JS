@@ -9,7 +9,7 @@ const addImage = (imgSrc, callback) => {
 
     const onImageLoaded = () => {
         const { width, height } = imgElem;
-        console.log(imgElem);
+        // console.log(imgElem);
 
         callback(null, { width, height });
     };
@@ -19,7 +19,7 @@ const addImage = (imgSrc, callback) => {
     imgElem.addEventListener('error', () => callback('Image load failed'))
 };
 
-const imgSrc = 'https://www.cxmagazine.com/wp-content/uploads/2015/03/RLT-9-853_150128_2852-Edit_1.jpg';
+const imgSrc = 'https://server.com/image.png';
 
 const onImageLoaded = (error, data) => {
     if (error) {
