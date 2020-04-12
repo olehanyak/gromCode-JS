@@ -1,31 +1,34 @@
+
 const addImage = (imgSrc, callback) => {
     const imgElem = document.createElement('img');
     imgElem.setAttribute('alt', 'My Photo');
     imgElem.src = imgSrc;
+
     const containerElem = document.querySelector('.page');
     containerElem.append(imgElem);
 
     const onImageLoaded = () => {
         const { width, height } = imgElem;
-        console.log(width, height);
-        callback(null, { width: 200, height: 100 });
+        console.log(imgElem);
+
+        callback(null, { width, height });
     };
 
     imgElem.addEventListener('load', onImageLoaded);
 
-    imgElem.addEventListener('error', () => callback('Image load failed'));
+    imgElem.addEventListener('error', () => callback('Image load failed'))
 };
 
-const imgSrc = 'https://surlybikes.com/uploads/bikes/_medium_image/Straggler_BK7804.jpg';
+const imgSrc = 'https://www.cxmagazine.com/wp-content/uploads/2015/03/RLT-9-853_150128_2852-Edit_1.jpg';
 
 const onImageLoaded = (error, data) => {
     if (error) {
-        console.log(error)
+        // console.log(error);
         return;
     }
     const { width, height } = data;
     const sizeElem = document.querySelector('.image-size');
-    sizeElem.textContent = `${width} x ${height}`;
+    sizeElem.textContent = `${width}: x ${height}`;
 };
 
 addImage(imgSrc, onImageLoaded);
