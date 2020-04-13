@@ -19,11 +19,11 @@ const addImage = (imgSrc, callback) => {
     imgElem.addEventListener('error', () => callback('Image load failed'))
 };
 
-const imgSrc = 'https://server.com/image.png';
+// const imgSrc = 'https://server.com/image.png';
 
 const onImageLoaded = (error, data) => {
     if (error) {
-        // console.log(error);
+        console.log(error);
         return;
     }
     const { width, height } = data;
@@ -31,6 +31,6 @@ const onImageLoaded = (error, data) => {
     sizeElem.textContent = `${width}: x ${height}`;
 };
 
-addImage(imgSrc, onImageLoaded);
+// addImage(imgSrc, onImageLoaded);
 
 export { addImage };
