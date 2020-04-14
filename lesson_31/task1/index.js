@@ -3,7 +3,7 @@ const requestUserData = userId => {
         if (userId === 'broken') {
             setTimeout(() => {
                 reject(new Error('User not found'));
-            }, 5000);
+            }, 500);
         }
         else {
             setTimeout(() => {
