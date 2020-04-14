@@ -8,10 +8,10 @@ const requestUserData = userId => {
         else {
             setTimeout(() => {
                 resolve({
-                    name: 'Blake',
-                    age: 44,
-                    email: `${userId}`,
-                    userId
+                    name: 'John',
+                    age: 17,
+                    email: 'userId@example.com',
+                    userId,
                 });
             }, 1000);
         }
