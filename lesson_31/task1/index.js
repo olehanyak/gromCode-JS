@@ -10,8 +10,8 @@ const requestUserData = userId => {
                 resolve({
                     name: 'John',
                     age: 17,
-                    email: 'userId@example.com',
-                    userId,
+                    email: `${userId}@example.com`,
+                    userId: `${userId}`,
                 });
             }, 1000);
         }
@@ -19,7 +19,7 @@ const requestUserData = userId => {
     return request;
 };
 
-requestUserData('broken')
+requestUserData('broken-1')
     .then(data => console.log(data))
     .catch(error => console.log(error))
     .finally(() => console.log('finally'));
