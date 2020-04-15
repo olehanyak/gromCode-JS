@@ -8,11 +8,11 @@ const promiseNumber3 = Promise.resolve(8);
  */
 
 const resultPromise = Promise.all([promiseNumber1, promiseNumber2, promiseNumber3])
-        .then(result => result)
+        .then(numbersOfArr => numbersOfArr)
 
 resultPromise
     .then(numbersList => {
-        console.log(numbersList);
+        // console.log(numbersList);
         const sum = numbersList.reduce((acc, num) => acc + num, 0);
         return sum;
     })
@@ -20,3 +20,4 @@ resultPromise
         console.log(result); // 98
     });
 
+export { resultPromise };
