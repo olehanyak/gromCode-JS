@@ -29,6 +29,7 @@ const userNameInputElem = document.querySelector('.name-form__input');
 
 const onSearchUser = () => {
     const userName = userNameInputElem.value;
+    console.log(userName);
     fetchUserData(userName)
         .then(userData => renderUserData(userData));
 };
