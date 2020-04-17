@@ -8,7 +8,7 @@ const defaultAvatar = 'https:avatars3.githubusercontent.com/u10001';
 userAvatarElem.src = defaultAvatar;
 
 const fetchUserData = userName => {
-    return fetch(`https:api.github.com/users/${userName}`)
+    return fetch(`https://api.github.com/users/${userName}`)
         .then(response => response.json());
 };
 
@@ -22,7 +22,6 @@ const renderUserData = userData => {
         ? `from ${location}`
         : '';
 };
-// console.log(renderUserData());
 
 const showUserBtnElem = document.querySelector('.name-form__btn');
 const userNameInputElem = document.querySelector('.name-form__input');
