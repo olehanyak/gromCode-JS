@@ -22,9 +22,10 @@ const changeStatusBtn = () => {
 getFormData.addEventListener('input', changeStatusBtn);
 
 const onFormSubmit = () => {
-   
-    const myFormDataOnPage = [...new FormData(getFormData)]
 
+    const myFormDataOnPage = getFormData.value
+        .reduce((acc, arr) => ({...acc, [arr[0]]: arr[1]}), {});
+       
     createUser(myFormDataOnPage)
         .then(response => response.json())
         .then(addDataUser => {
@@ -36,7 +37,7 @@ const onFormSubmit = () => {
             submitBtn.disabled = true;
         });
 
-        console.log(myFormDataOnPage)
+    console.log(myFormDataOnPage)
 };
 
 const createUser = addDataUser => {
