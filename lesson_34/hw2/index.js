@@ -32,10 +32,12 @@ const getResult = (e) => {
         .then(addDataUser => {
             alert(JSON.stringify(addDataUser));
             submitBtn.disabled = true;
+            getFormData = '';
         })
         .catch(() => {
             errorText.textContent = 'Failed to create user';
             submitBtn.disabled = true;
+            getFormData = '';
         });
 
     console.log(myFormDataOnPage)
