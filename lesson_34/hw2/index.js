@@ -21,8 +21,8 @@ const changeStatusBtn = () => {
 
 getFormData.addEventListener('input', changeStatusBtn);
 
-const onFormSubmit = (e) => {
-    e.preventDefault();
+const onFormSubmit = () => {
+   
     const myFormDataOnPage = [...new FormData(getFormData)]
 
     createUser(myFormDataOnPage)
