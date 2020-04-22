@@ -21,6 +21,7 @@ const changeStatusBtn = () => {
 
 getFormData.addEventListener('input', changeStatusBtn);
 
+// const clearForm = getFormData.value
 
 const getResult = (e) => {
     e.preventDefault();
@@ -32,12 +33,12 @@ const getResult = (e) => {
         .then(addDataUser => {
             alert(JSON.stringify(addDataUser));
             submitBtn.disabled = true;
-            getFormData = '';
+            getFormData.reset();
         })
         .catch(() => {
             errorText.textContent = 'Failed to create user';
             submitBtn.disabled = true;
-            getFormData = '';
+            // getFormData = '';
         });
 
     console.log(myFormDataOnPage)
