@@ -21,12 +21,13 @@ const changeStatusBtn = () => {
 
 getFormData.addEventListener('input', changeStatusBtn);
 
-const onFormSubmit = () => {
 
-    const myFormDataOnPage = getFormData.value
-        .reduce((acc, arr) => ({...acc, [arr[0]]: arr[1]}), {});
-       
-    createUser(myFormDataOnPage)
+const getResult = (e) => {
+    e.preventDefault();
+    const myFormDataOnPage = [...new FormData(getFormData)]
+        .reduce((acc, arr) => ({ ...acc, [arr[0]]: arr[1] }), {});
+
+    postDataUser(myFormDataOnPage)
         .then(response => response.json())
         .then(addDataUser => {
             alert(JSON.stringify(addDataUser));
@@ -40,7 +41,8 @@ const onFormSubmit = () => {
     console.log(myFormDataOnPage)
 };
 
-const createUser = addDataUser => {
+const postDataUser = addDataUser => {
+    console.log(addDataUser)
     return fetch(userUrl, {
         method: 'POST',
         headers: {
@@ -52,6 +54,7 @@ const createUser = addDataUser => {
 
 
 
-getFormData.addEventListener('submit', onFormSubmit);
+
+getFormData.addEventListener('submit', getResult);
 
 
