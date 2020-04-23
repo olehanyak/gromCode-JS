@@ -1,7 +1,7 @@
-import { fetchUserData, fetchRepositories } from './gateways';
-import { renderUserData } from './user';
-import { renderRepos, cleanReposList } from './repos';
-import { showSpinner, hideSpinner } from './spinner';
+import { fetchUserData, fetchRepositories } from './gateways.js';
+import { renderUserData } from './user.js';
+import { renderRepos, cleanReposList } from './repos.js';
+import { showSpinner, hideSpinner } from './spinner.js';
 
 const defaultUser = {
     avatar_url: 'https://avatars3.githubusercontent.com/u10001',
