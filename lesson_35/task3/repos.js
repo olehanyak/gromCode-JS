@@ -12,7 +12,7 @@ export const renderRepos = reposList => {
             listsElem.textContent = name;
 
             return listsElem;
-        })
+        });
     cleanReposList();
     listElem.append(...reposListElems);
 };
