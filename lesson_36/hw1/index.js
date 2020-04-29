@@ -35,3 +35,4 @@ getUsersBlogs(['google', 'facebook', 'gaearon'])
 
 // Promise.all([getUsersBlogs(['google']), getUsersBlogs(['facebook']), getUsersBlogs(['gaearon'])])
 
+export { getUsersBlogs };
